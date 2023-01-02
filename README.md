@@ -16,3 +16,7 @@ Technologies used: JavaScript, HTML, CSS
 Some useful links
 https://blog.hubspot.com/website/html-text-box
 https://gomakethings.com/how-to-get-the-value-of-an-input-as-a-number-with-vanilla-javascript/
+
+Next Steps: Planned future enhancements
+-winRatio, winNumber, lossNumber, spinNumber will be added
+-Will add user login system, payment methods

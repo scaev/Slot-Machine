@@ -3,7 +3,7 @@ let reels = ["", "", ""], // array to hold the symbols for each reel
   playerMoney = 1000, // starting money for the player
   //   playerBet = 0, // current bet for the player
   winnings = 0, // current winnings for the player
-  jackpot = 5000, // current jackpot amount
+  //   jackpot = 5000, // current jackpot amount
   spinResult; // result of the current spin
 
 function init() {
@@ -25,49 +25,29 @@ function spin() {
   document.getElementById("reel2").innerHTML = reels[1];
   document.getElementById("reel3").innerHTML = reels[2];
 }
-// First Try
-// let playerBet = document.querySelector('#betAmount')
-// betAmount.addEventListener('input', function(){
-//     let valAsNumber = parseFloat(betAmount.value);
-//     // console.log(valAsNumber);
-// });
-// console.log(valAsNumber);
 
-// second try
-// betInput = document.getElementById("#betAmount");
-// console.log(betInput.value);
-
-// third try
-// function getInputValue() {
-//     // Selecting the input element and get its value
-//     let inputVal = document.getElementById("#betAmount").value;
-//     // Displaying the value
-//     console.log(inputVal);
-//   }
-// 4. try
-// playerBet = document.querySelector('#betAmount').value;
-// console.log(playerBet);
-
-// I couldn't get the value as number. That's why I can not calculate the playerMoney
 function determineWinnings() {
+  let betInput = document.getElementById("betInput");
+  let playerBet = betInput.valueAsNumber;
   if (reels[0] == reels[1] && reels[1] == reels[2]) {
-    let betInput = document.getElementById("betInput");
-    let playerBet = betInput.value;
-    winnings = playerBet * 5;
-    playerMoney = playerMoney + playerBet;
+    winnings = playerBet * 10;
+    playerMoney = playerMoney + winnings;
     document.getElementById("result").innerHTML = "YOU WON";
     document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
-    console.log(winnings);
+    document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
   } else {
     winnings = 0;
+    playerMoney = playerMoney - playerBet;
     document.getElementById("result").innerHTML = "YOU LOST";
-    playerMoney -= playerBet;
+    document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
   }
-  // playerMoney += winnings;
 }
 
+// I shouldn't repeat my code. I need to find a solution
 document.getElementById("spinButton").addEventListener("click", function () {
-  playerBet = document.getElementById("betAmount");
+  //   playerBet = document.getElementById("betAmount");
+  let betInput = document.getElementById("betInput");
+  let playerBet = betInput.valueAsNumber;
   if (playerBet > playerMoney) {
     alert(
       "You do not have enough money to place that bet. Please enter a smaller amount."
@@ -76,9 +56,8 @@ document.getElementById("spinButton").addEventListener("click", function () {
   }
   spin();
   determineWinnings();
-  updateStatistics();
-  alert("You won: $" + winnings);
-  if (playerMoney == 0) {
+  if (playerMoney <= 0) {
     alert("You have run out of money!");
   }
 });
+init();
