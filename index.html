@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Slot Machine</title>
   </head>
   <body>
-    <h1>Welcome to the Slot Game!</h1>
-    <p>You have $1000 to start with.</p>
-    <div id="reels">
-      <div id="reel1"></div>
-      <div id="reel2"></div>
-      <div id="reel3"></div>
+    <div id="slot-machine">
+      <h1 id="title">Welcome to the Slot Game!</h1>
+      <section id="reels">
+        <div id="reel1" class="icons"></div>
+        <div id="reel2" class="icons"></div>
+        <div id="reel3" class="icons"></div>
+      </section>
+      <section id="moneyBar">
+        <div>You have $1000 to start with.</div>
+        <div id="money">Money: $1000</div>
+        <div id="bet">Bet: $0</div>
+        <div id="winnings">Winnings: $0</div>
+      </section>
+      <button id="spinButton">Press the button to play!</button>
+      <div id="result">Result</div>
     </div>
-    <button id="spinButton">Spin</button>
-    <p id="result">Result:</p>
-    <p id="money">Money: $1000</p>
-    <p id="bet">Bet: $0</p>
-    <p id="winnings">Winnings: $0</p>  
   </body>
 </html>
