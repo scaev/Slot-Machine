@@ -7,14 +7,22 @@
   text-align: center;
   border-radius: 5px;
   color: #86c9f5;
+  border: solid;
+  border-color: #076eb3;
 }
 
 section#reels {
   display: flex;
   justify-content: space-around;
   border-radius: 15px;
-  background-color: #fafafa;
+  background-color:white;
   padding: 20px;
   border: solid;
   border-color: #076eb3;
+}
+
+.icons {
+  font-size: 50px;
+  text-align: center;
+  margin: 10px;
 }
