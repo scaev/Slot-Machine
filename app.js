@@ -20,6 +20,19 @@ function spin() {
     let randomIndex = Math.floor(Math.random() * symbols.length);
     reels[i] = symbols[randomIndex];
   }
+  // Update the symbols on the reels in the HTML page
+  document.getElementById("reel1").innerHTML = reels[0];
+  document.getElementById("reel2").innerHTML = reels[1];
+  document.getElementById("reel3").innerHTML = reels[2];
+}
+
+function determineWinnings() {
+  if (reels[1] == reels[2] && reels[2] == reels[3]) {
+    winnings = playerBet * 5;
+  } else {
+    winnings = 0;
+  }
+  playerMoney += winnings;
 }
 
 document.getElementById("spinButton").addEventListener("click", function () {
@@ -38,7 +51,3 @@ document.getElementById("spinButton").addEventListener("click", function () {
     alert("You have run out of money!");
   }
 });
-
-// document.getElementById("reel1").innerHTML = symbols[0];
-// document.getElementById("reel2").innerHTML = symbols[2];
-// document.getElementById("reel3").innerHTML = symbols[1];
