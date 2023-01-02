@@ -1,7 +1,7 @@
 let reels = ["", "", ""], // array to hold the symbols for each reel
   symbols = ["🍌", "🍕", "🍾"], // array to hold the possible symbols
   playerMoney = 1000, // starting money for the player
-  playerBet = 0, // current bet for the player
+//   playerBet = 0, // current bet for the player
   winnings = 0, // current winnings for the player
   jackpot = 5000, // current jackpot amount
   spinResult; // result of the current spin
@@ -25,15 +25,35 @@ function spin() {
   document.getElementById("reel2").innerHTML = reels[1];
   document.getElementById("reel3").innerHTML = reels[2];
 }
+// First Try
+// let playerBet = document.querySelector('#betAmount')
+// betAmount.addEventListener('input', function(){
+//     let valAsNumber = parseFloat(betAmount.value);
+//     // console.log(valAsNumber);
+// });
+// console.log(valAsNumber);
+
+// second try
+// betInput = document.getElementById("#betAmount");
+// console.log(betInput.value);
+
+// third try
+// function getInputValue() {
+//     // Selecting the input element and get its value
+//     let inputVal = document.getElementById("#betAmount").value;
+//     // Displaying the value
+//     console.log(inputVal);
+//   }
+// 4. try
+// playerBet = document.querySelector('#betAmount').value;
+// console.log(playerBet);
 
 function determineWinnings() {
   if (reels[0] == reels[1] && reels[1] == reels[2]) {
-    playerBet = document.getElementById("betAmount");
     winnings = playerBet * 5;
     playerMoney += winnings;
     document.getElementById("result").innerHTML = "YOU WON";
     console.log("Testing winner function");
-    console.log(playerBet);
   } else {
     winnings = 0;
     document.getElementById("result").innerHTML = "YOU LOST";

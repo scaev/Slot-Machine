@@ -12,3 +12,7 @@ You can also customize your experience by adjusting the bet amount.
 Good luck and have fun!
 
 Technologies used: JavaScript, HTML, CSS
+
+Some useful links
+https://blog.hubspot.com/website/html-text-box
+https://gomakethings.com/how-to-get-the-value-of-an-input-as-a-number-with-vanilla-javascript/
