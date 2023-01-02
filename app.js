@@ -15,6 +15,30 @@ function init() {
   }
 }
 
-document.getElementById("reel1").innerHTML = symbols[0];
-document.getElementById("reel2").innerHTML = symbols[2];
-document.getElementById("reel3").innerHTML = symbols[1];
+function spin() {
+  for (let i = 0; i < reels.length; i++) {
+    let randomIndex = Math.floor(Math.random() * symbols.length);
+    reels[i] = symbols[randomIndex];
+  }
+}
+
+document.getElementById("spinButton").addEventListener("click", function () {
+  playerBet = document.getElementById("betAmount");
+  if (playerBet > playerMoney) {
+    alert(
+      "You do not have enough money to place that bet. Please enter a smaller amount."
+    );
+    return;
+  }
+  spin();
+  determineWinnings();
+  updateStatistics();
+  alert("You won: $" + winnings);
+  if (playerMoney == 0) {
+    alert("You have run out of money!");
+  }
+});
+
+// document.getElementById("reel1").innerHTML = symbols[0];
+// document.getElementById("reel2").innerHTML = symbols[2];
+// document.getElementById("reel3").innerHTML = symbols[1];

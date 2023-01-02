@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Slot Machine</title>
   </head>
   <body>
@@ -19,7 +19,14 @@
       <section id="moneyBar">
         <div>You have $1000 to start with.</div>
         <div id="money">Money: $1000</div>
-        <div id="bet">Bet: $0</div>
+        <div id="bet">
+          Bet:
+          <input
+            type="number"
+            id="betAmount"
+            placeholder="Enter Amount"
+          />
+        </div>
         <div id="winnings">Winnings: $0</div>
       </section>
       <button id="spinButton">Press the button to play!</button>
