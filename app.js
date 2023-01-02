@@ -1,7 +1,7 @@
 let reels = ["", "", ""], // array to hold the symbols for each reel
   symbols = ["🍌", "🍕", "🍾"], // array to hold the possible symbols
   playerMoney = 1000, // starting money for the player
-//   playerBet = 0, // current bet for the player
+  //   playerBet = 0, // current bet for the player
   winnings = 0, // current winnings for the player
   jackpot = 5000, // current jackpot amount
   spinResult; // result of the current spin
@@ -48,12 +48,16 @@ function spin() {
 // playerBet = document.querySelector('#betAmount').value;
 // console.log(playerBet);
 
+// I couldn't get the value as number. That's why I can not calculate the playerMoney
 function determineWinnings() {
   if (reels[0] == reels[1] && reels[1] == reels[2]) {
+    let betInput = document.getElementById("betInput");
+    let playerBet = betInput.value;
     winnings = playerBet * 5;
-    playerMoney += winnings;
+    playerMoney = playerMoney + playerBet;
     document.getElementById("result").innerHTML = "YOU WON";
-    console.log("Testing winner function");
+    document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
+    console.log(winnings);
   } else {
     winnings = 0;
     document.getElementById("result").innerHTML = "YOU LOST";
