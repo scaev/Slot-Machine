@@ -1,2 +1,14 @@
 # Slot-Machine
+
 Slot Machine
+Welcome to the Slot Machine!
+
+This is a simple game where you can spin the reels and try your luck at winning virtual prizes.
+
+To play, just press the "Spin" button and the reels will start spinning. If you're lucky, you might win a prize!
+
+You can also customize your experience by adjusting the bet amount.
+
+Good luck and have fun!
+
+Technologies used: JavaScript, HTML, CSS
