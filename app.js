@@ -27,12 +27,19 @@ function spin() {
 }
 
 function determineWinnings() {
-  if (reels[1] == reels[2] && reels[2] == reels[3]) {
+  if (reels[0] == reels[1] && reels[1] == reels[2]) {
+    playerBet = document.getElementById("betAmount");
     winnings = playerBet * 5;
+    playerMoney += winnings;
+    document.getElementById("result").innerHTML = "YOU WON";
+    console.log("Testing winner function");
+    console.log(playerBet);
   } else {
     winnings = 0;
+    document.getElementById("result").innerHTML = "YOU LOST";
+    playerMoney -= playerBet;
   }
-  playerMoney += winnings;
+  // playerMoney += winnings;
 }
 
 document.getElementById("spinButton").addEventListener("click", function () {
