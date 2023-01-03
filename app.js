@@ -5,11 +5,7 @@ let reels = ["", "", ""], // array to hold the symbols for each reel
   winnings = 0, // current winnings for the player
   spinResult; // result of the current spin
 
-function init() {
-  for (let i = 0; i < reels.length; i++) {
-    reels[i] = "";
-  }
-}
+
 // Spin the reels and determine the result
 function spin() {
   for (let i = 0; i < reels.length; i++) {
@@ -45,7 +41,6 @@ function determineWinnings() {
   }
 }
 
-// I shouldn't repeat my code. I need to find a solution
 // Add event listener for the spin button
 document.getElementById("spinButton").addEventListener("click", function () {
   let betInput = document.getElementById("betInput");
@@ -63,4 +58,3 @@ document.getElementById("spinButton").addEventListener("click", function () {
     alert("You have run out of money!");
   }
 });
-init();
