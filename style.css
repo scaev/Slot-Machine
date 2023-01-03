@@ -25,10 +25,9 @@ section#reels {
 
 section#moneyBar {
   width: 300px;
+  display:inline
   color: whitesmoke;
   margin: 25px auto;
-  /* border: 2px solid #076eb3;
-    border-radius: 10px; */
   text-align: auto;
   padding: 5px;
 }
@@ -63,7 +62,5 @@ div#result {
   margin: 10px auto;
   border: 2px solid #076eb3;
   border-radius: 15px;
-  /* background-color: #2DFA56; */
-  /* change the color if it won or lost */
   padding: 10px;
 }

@@ -31,11 +31,17 @@ function determineWinnings() {
     document.getElementById("result").innerHTML = "YOU WON";
     document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
     document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
+    document.getElementById("result").style.background = "#75f56e";
+    let coin = new Audio("sounds/coin.mp3");
+    coin.play();
   } else {
     winnings = 0;
     playerMoney = playerMoney - playerBet;
     document.getElementById("result").innerHTML = "YOU LOST";
     document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
+    document.getElementById("result").style.background = "#70231F";
+    let negative = new Audio("sounds/negative.mp3");
+    negative.play();
   }
 }
 
