@@ -29,4 +29,3 @@ Next Steps:
 - User login system
 - Payment methods
 - Turning effect to the wheels
-- Mute sound effects function

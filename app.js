@@ -2,9 +2,9 @@ let reels = ["", "", ""], // array to hold the symbols for each reel
   symbols = ["🍌", "🍕", "🍾", "👻"], // array to hold the possible symbols
   playerMoney = 1000, // starting money for the player
   playerBet = 0, // current bet for the player
-  winnings = 0, // current winnings for the player
-  spinResult; // result of the current spin
-
+  winnings = 0; // current winnings for the player
+let negative = new Audio("sounds/negative.mp3");
+let coin = new Audio("sounds/coin.mp3");
 
 // Spin the reels and determine the result
 function spin() {
@@ -17,6 +17,7 @@ function spin() {
   document.getElementById("reel2").innerHTML = reels[1];
   document.getElementById("reel3").innerHTML = reels[2];
 }
+
 // Check if the player has won and update the winnings and player money accordingly
 function determineWinnings() {
   let betInput = document.getElementById("betInput");
@@ -28,7 +29,6 @@ function determineWinnings() {
     document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
     document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
     document.getElementById("result").style.background = "#75f56e";
-    let coin = new Audio("sounds/coin.mp3");
     coin.play();
   } else {
     winnings = 0;
@@ -36,10 +36,15 @@ function determineWinnings() {
     document.getElementById("result").innerHTML = "YOU LOST";
     document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
     document.getElementById("result").style.background = "#70231F";
-    let negative = new Audio("sounds/negative.mp3");
     negative.play();
   }
 }
+
+// Add event listener for the mute button
+document.getElementById("muteSound").addEventListener("click", function () {
+  negative.muted = true;
+  coin.muted = true;
+});
 
 // Add event listener for the spin button
 document.getElementById("spinButton").addEventListener("click", function () {

@@ -44,11 +44,23 @@ h1#title {
   margin: 10px auto 30px;
 }
 
+#muteSound {
+  cursor: pointer;
+  margin: 15px auto;
+  border: 2px solid #076eb3;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+
+#muteSound:hover {
+  opacity: 1;
+}
+
 #spinButton {
   color: whitesmoke;
   font-size: 26px;
   cursor: pointer;
-  margin: 15px auto 10px auto;
+  margin: 15px auto;
   padding: 25px;
   background-color: #1abc9c;
   border: 2px solid #076eb3;
