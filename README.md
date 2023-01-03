@@ -20,3 +20,5 @@ https://gomakethings.com/how-to-get-the-value-of-an-input-as-a-number-with-vanil
 Next Steps: Planned future enhancements
 -winRatio, winNumber, lossNumber, spinNumber will be added
 -Will add user login system, payment methods
+-Adding turning effect to the wheels would be nice
+-Button click sound will be added

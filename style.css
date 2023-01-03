@@ -1,12 +1,12 @@
 #slot-machine {
-  background-color: #de56b2;
+  background-color: #3271d9;
   margin-top: 30px;
   padding: 20px;
   width: 700px;
   margin: auto;
   text-align: center;
   border-radius: 5px;
-  color: #86c9f5;
+  color: #56e1fa;
   border: solid;
   border-color: #076eb3;
 }
@@ -15,14 +15,55 @@ section#reels {
   display: flex;
   justify-content: space-around;
   border-radius: 15px;
-  background-color:white;
+  height: 70px;
+  background-color: white;
   padding: 20px;
   border: solid;
   border-color: #076eb3;
+  margin: 0px 100px 0px 100px;
+}
+
+section#moneyBar {
+  width: 300px;
+  color: whitesmoke;
+  margin: 25px auto;
+  /* border: 2px solid #076eb3;
+    border-radius: 10px; */
+  text-align: auto;
+  padding: 5px;
+}
+
+#spinButton:hover {
+  background-color: #75f56e;
 }
 
 .icons {
   font-size: 50px;
   text-align: center;
-  margin: 10px;
+}
+h1#title {
+  color: whitesmoke;
+  font-size: 26px;
+  margin: 10px auto 30px;
+}
+#spinButton {
+  color: whitesmoke;
+  font-size: 26px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 25px;
+  background-color: #2610db;
+  border: 2px solid #076eb3;
+  border-radius: 10px;
+}
+div#result {
+  width: 100px;
+  color: whitesmoke;
+  margin: 10px auto;
+  border: 2px solid #076eb3;
+  border-radius: 15px;
+  /* background-color: #2DFA56; */
+  /* change the color if it won or lost */
+  padding: 10px;
 }

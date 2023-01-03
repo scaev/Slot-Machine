@@ -1,20 +1,16 @@
 let reels = ["", "", ""], // array to hold the symbols for each reel
-  symbols = ["🍌", "🍕", "🍾"], // array to hold the possible symbols
+  symbols = ["🍌", "🍕", "🍾", "👻"], // array to hold the possible symbols
   playerMoney = 1000, // starting money for the player
-  //   playerBet = 0, // current bet for the player
+  playerBet = 0, // current bet for the player
   winnings = 0, // current winnings for the player
-  //   jackpot = 5000, // current jackpot amount
   spinResult; // result of the current spin
 
 function init() {
   for (let i = 0; i < reels.length; i++) {
-    reels[i] = "blank";
-  }
-  for (let i = 0; i < symbols.length; i++) {
-    symbols[i] = symbols[i];
+    reels[i] = "";
   }
 }
-
+// Spin the reels and determine the result
 function spin() {
   for (let i = 0; i < reels.length; i++) {
     let randomIndex = Math.floor(Math.random() * symbols.length);
@@ -25,7 +21,7 @@ function spin() {
   document.getElementById("reel2").innerHTML = reels[1];
   document.getElementById("reel3").innerHTML = reels[2];
 }
-
+// Check if the player has won and update the winnings and player money accordingly
 function determineWinnings() {
   let betInput = document.getElementById("betInput");
   let playerBet = betInput.valueAsNumber;
@@ -44,8 +40,8 @@ function determineWinnings() {
 }
 
 // I shouldn't repeat my code. I need to find a solution
+// Add event listener for the spin button
 document.getElementById("spinButton").addEventListener("click", function () {
-  //   playerBet = document.getElementById("betAmount");
   let betInput = document.getElementById("betInput");
   let playerBet = betInput.valueAsNumber;
   if (playerBet > playerMoney) {
@@ -56,6 +52,7 @@ document.getElementById("spinButton").addEventListener("click", function () {
   }
   spin();
   determineWinnings();
+  // Check if the player has run out of money
   if (playerMoney <= 0) {
     alert("You have run out of money!");
   }
