@@ -11,18 +11,22 @@ You can also customize your experience by adjusting the bet amount.
 
 Good luck and have fun!
 
+https://scaev.github.io/Slot-Machine/
+
 Technologies used: JavaScript, HTML, CSS
 
 ![Slot MAchines](https://i.imgur.com/ZI9Nov1.png)
+![My Project](https://i.imgur.com/CYfPO6m.png)
 
 Some useful links:
 
 - [HTML Textbox](https://blog.hubspot.com/website/html-text-box)
 - [Input value as a number](https://blog.hubspot.com/website/html-text-box)
 
-Next Steps: Planned future enhancements
--winRatio, winNumber, lossNumber, spinNumber
--User login system
--Payment methods
--Turning effect to the wheels
--Mute sound effects function
+Next Steps:
+
+- winRatio, winNumber, lossNumber, spinNumber
+- User login system
+- Payment methods
+- Turning effect to the wheels
+- Mute sound effects function
