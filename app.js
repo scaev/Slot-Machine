@@ -13,9 +13,12 @@ function spin() {
     reels[i] = symbols[randomIndex];
   }
   // Update the symbols on the reels in the HTML page
-  document.getElementById("reel1").innerHTML = reels[0];
-  document.getElementById("reel2").innerHTML = reels[1];
-  document.getElementById("reel3").innerHTML = reels[2];
+  // document.getElementById("reel1").innerHTML = reels[0];
+  // document.getElementById("reel2").innerHTML = reels[1];
+  // document.getElementById("reel3").innerHTML = reels[2];
+  $("#reel1").html(reels[0]);
+  $("#reel2").html(reels[1]);
+  $("#reel3").html(reels[2]);
 }
 
 // Check if the player has won and update the winnings and player money accordingly
@@ -25,29 +28,46 @@ function determineWinnings() {
   if (reels[0] == reels[1] && reels[1] == reels[2]) {
     winnings = playerBet * 10;
     playerMoney = playerMoney + winnings;
-    document.getElementById("result").innerHTML = "YOU WON";
-    document.getElementById("result").style.background = "#75f56e";
+    // document.getElementById("result").innerHTML = "YOU WON";
+    // document.getElementById("result").style.background = "#75f56e";
+    $(result).html("YOU WON");
+    $(result).css({ background: "#75f56e" });
     coin.play();
   } else {
     winnings = 0;
     playerMoney = playerMoney - playerBet;
-    document.getElementById("result").innerHTML = "YOU LOST";
-    document.getElementById("result").style.background = "#70231F";
+    // document.getElementById("result").innerHTML = "YOU LOST";
+    // document.getElementById("result").style.background = "#70231F";
+    $("#result").html("YOU LOST");
+    $("#result").css({ background: "#70231F" });
     negative.play();
   }
-  document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
-  document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
+  // document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
+  // document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
+  $("#money").html(`Money: $${playerMoney}`);
+  $("#winnings").html(`Winnings: $${winnings}`);
 }
 
 // Add event listener for the mute button
 document.getElementById("muteSound").addEventListener("click", function () {
-  document.getElementById("muteSound").innerHTML = "🔇";
-  negative.muted = true;
-  coin.muted = true;
+  if ((document.getElementById("muteSound").innerHTML = "🔊")) {
+    // document.getElementById("muteSound").innerHTML = "🔇";
+    $(muteSound).html("🔇");
+    negative.muted = true;
+    coin.muted = true;
+  }
+  document.getElementById("muteSound").addEventListener("click", function () {
+    if ((document.getElementById("muteSound").innerHTML = "🔇")) {
+      // document.getElementById("muteSound").innerHTML = "🔊";
+      $(muteSound).html("🔊");
+      negative.muted = false;
+      coin.muted = false;
+    }
+  });
 });
 
 // Add event listener for the spin button
-document.getElementById("spinButton").addEventListener("click", function () {
+$(spinButton).click(function () {
   let betInput = document.getElementById("betInput");
   let playerBet = betInput.valueAsNumber;
   // Check if the player has run out of money
@@ -67,5 +87,6 @@ document.getElementById("spinButton").addEventListener("click", function () {
   }
   spin();
   determineWinnings();
-  startingMoney.style.display = "none";
+  // startingMoney.style.display = "none";
+  $(startingMoney).hide();
 });

@@ -16,7 +16,7 @@ https://scaev.github.io/Slot-Machine/
 Technologies used: JavaScript, HTML, CSS
 
 ![Slot MAchines](https://i.imgur.com/ZI9Nov1.png)
-![My Project](https://i.imgur.com/CYfPO6m.png)
+![My Project](https://i.imgur.com/WdLNFlk.png)
 
 Some useful links:
 
