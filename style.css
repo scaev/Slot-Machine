@@ -60,7 +60,7 @@ h1#title {
   color: whitesmoke;
   font-size: 26px;
   cursor: pointer;
-  margin: 15px auto;
+  margin: 15px 15px 15px 0px;
   padding: 25px;
   background-color: #1abc9c;
   border: 2px solid #076eb3;

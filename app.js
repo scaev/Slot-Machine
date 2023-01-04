@@ -3,8 +3,8 @@ let reels = ["", "", ""], // array to hold the symbols for each reel
   playerMoney = 1000, // starting money for the player
   playerBet = 0, // current bet for the player
   winnings = 0; // current winnings for the player
-let negative = new Audio("sounds/negative.mp3");
-let coin = new Audio("sounds/coin.mp3");
+negative = new Audio("sounds/negative.mp3");
+coin = new Audio("sounds/coin.mp3");
 
 // Spin the reels and determine the result
 function spin() {
@@ -26,22 +26,22 @@ function determineWinnings() {
     winnings = playerBet * 10;
     playerMoney = playerMoney + winnings;
     document.getElementById("result").innerHTML = "YOU WON";
-    document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
-    document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
     document.getElementById("result").style.background = "#75f56e";
     coin.play();
   } else {
     winnings = 0;
     playerMoney = playerMoney - playerBet;
     document.getElementById("result").innerHTML = "YOU LOST";
-    document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
     document.getElementById("result").style.background = "#70231F";
     negative.play();
   }
+  document.getElementById("money").innerHTML = `Money: $${playerMoney}`;
+  document.getElementById("winnings").innerHTML = `Winnings: $${winnings}`;
 }
 
 // Add event listener for the mute button
 document.getElementById("muteSound").addEventListener("click", function () {
+  document.getElementById("muteSound").innerHTML = "🔇";
   negative.muted = true;
   coin.muted = true;
 });
@@ -50,6 +50,15 @@ document.getElementById("muteSound").addEventListener("click", function () {
 document.getElementById("spinButton").addEventListener("click", function () {
   let betInput = document.getElementById("betInput");
   let playerBet = betInput.valueAsNumber;
+  // Check if the player has run out of money
+  if (playerMoney <= 0) {
+    alert("You have run out of money!");
+    return;
+  }
+  if (isNaN(playerBet)) {
+    alert("Please enter your bet.");
+    return;
+  }
   if (playerBet > playerMoney) {
     alert(
       "You do not have enough money to place that bet. Please enter a smaller amount."
@@ -58,8 +67,5 @@ document.getElementById("spinButton").addEventListener("click", function () {
   }
   spin();
   determineWinnings();
-  // Check if the player has run out of money
-  if (playerMoney <= 0) {
-    alert("You have run out of money!");
-  }
+  startingMoney.style.display = "none";
 });
