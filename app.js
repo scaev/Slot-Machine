@@ -1,6 +1,5 @@
 let reels = ["", "", ""], // array to hold the symbols for each reel
-  symbols2 = ["🍌", "🍕", "🍾", "👻"], // array to hold the possible symbols
-  symbols = ["A", "B", "C", "D"], // array to hold the possible symbols
+  symbols = ["🍌", "🍕", "🍾", "👻"], // array to hold the possible symbol
   playerMoney = 1000, // starting money for the player
   playerBet = 0, // current bet for the player
   winnings = 0; // current winnings for the player
@@ -13,46 +12,9 @@ function spin() {
     let randomIndex = Math.floor(Math.random() * symbols.length);
     reels[i] = symbols[randomIndex];
   }
-  // Update the symbols on the reels in the HTML page
-  // document.getElementById("reel1").innerHTML = reels[0];
-  // document.getElementById("reel2").innerHTML = reels[1];
-  // document.getElementById("reel3").innerHTML = reels[2];
-  // odoo.default({ el: '#reel1', from: '', to:'reels[0]', animationDelay: 1000 });
-  // odoo.default({ el: '#reel2', from: '', to:reels[1], animationDelay: 1000 });
-  // odoo.default({ el:'#reel3', from: '', to:reels[2], animationDelay: 1000 });
   $("#reel1").html(reels[0]);
   $("#reel2").html(reels[1]);
   $("#reel3").html(reels[2]);
-  // let text1 = reels[0];
-  // let text2 = reels[1];
-  // let text3 = reels[2];
-
-  function animate(text1, text2, text3) {
-    odoo.default({
-      el: "#reel1",
-      from: "",
-      to: reels[0],
-      animationDelay: 1000,
-    });
-    odoo.default({
-      el: "#reel2",
-      from: "",
-      to: reels[1],
-      animationDelay: 1000,
-    });
-    odoo.default({
-      el: "#reel3",
-      from: "",
-      to: reels[2],
-      animationDelay: 1000,
-    });
-  }
-
-  animate();
-
-  // $("#reel1").html(reels[0]);
-  // $("#reel2").html(reels[1]);
-  // $("#reel3").html(reels[2]);
 }
 
 // Check if the player has won and update the winnings and player money accordingly
