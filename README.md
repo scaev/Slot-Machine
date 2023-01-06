@@ -22,6 +22,9 @@ Some useful links:
 
 - [HTML Textbox](https://blog.hubspot.com/website/html-text-box)
 - [Input value as a number](https://blog.hubspot.com/website/html-text-box)
+- [Adding external JavaScript file](https://www.w3schools.com/tags/att_script_src.asp)
+- [Stackoverflow - Adding animation to loop](https://www.w3schools.com/tags/att_script_src.asp)
+
 
 Next Steps:
 

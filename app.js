@@ -16,9 +16,13 @@ function spin() {
   // document.getElementById("reel1").innerHTML = reels[0];
   // document.getElementById("reel2").innerHTML = reels[1];
   // document.getElementById("reel3").innerHTML = reels[2];
+  odoo.default({ el: '#reel1', from: '', to:'reels[0]', animationDelay: 1000 });
+  odoo.default({ el: '#reel2', from: '', to:reels[1], animationDelay: 1000 });
+  odoo.default({ el:'#reel3', from: '', to:reels[2], animationDelay: 1000 });
   $("#reel1").html(reels[0]);
   $("#reel2").html(reels[1]);
   $("#reel3").html(reels[2]);
+  
 }
 
 // Check if the player has won and update the winnings and player money accordingly
