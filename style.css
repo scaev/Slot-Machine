@@ -25,6 +25,11 @@ section#reels {
   margin: 0px 100px 0px 100px;
 }
 
+.reels {
+  transition: transform 1s ease-in-out;
+  transform: translateY(0);
+}
+
 section#moneyBar {
   display: inline;
   margin: 25px auto;
