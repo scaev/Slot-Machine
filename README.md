@@ -13,7 +13,7 @@ Good luck and have fun!
 
 https://scaev.github.io/Slot-Machine/
 
-Technologies used: JavaScript, HTML, CSS
+Technologies used: JavaScript, HTML, CSS, jQuery
 
 ![Slot MAchines](https://i.imgur.com/ZI9Nov1.png)
 ![My Project](https://i.imgur.com/WdLNFlk.png)

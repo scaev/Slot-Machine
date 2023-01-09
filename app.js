@@ -3,8 +3,8 @@ let reels = ["", "", ""], // array to hold the symbols for each reel
   playerMoney = 1000, // starting money for the player
   playerBet = 0, // current bet for the player
   winnings = 0; // current winnings for the player
-negative = new Audio("sounds/negative.mp3");
-coin = new Audio("sounds/coin.mp3");
+  negative = new Audio("sounds/negative.mp3");
+  coin = new Audio("sounds/coin.mp3");
 
 // Spin the reels and determine the result
 function randomValue() {
