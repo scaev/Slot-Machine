@@ -1,7 +1,6 @@
 <div id="description" align="center"> 
-# Slot-Machine
+### Slot-Machine
 
-Slot Machine
 Welcome to the Slot Machine!
 
 This is a simple game where you can spin the reels and try your luck at winning virtual prizes.
@@ -29,12 +28,12 @@ Good luck and have fun!
 
 Some useful links:
 
-- [HTML Textbox](https://blog.hubspot.com/website/html-text-box)
-- [Input value as a number](https://blog.hubspot.com/website/html-text-box)
+[HTML Textbox](https://blog.hubspot.com/website/html-text-box)
+[Input value as a number](https://blog.hubspot.com/website/html-text-box)
 
 Next Steps:
 
-- winRatio, winNumber, lossNumber, spinNumber
-- User login system
-- Payment methods
-- Turning effect to the wheels
+winRatio, winNumber, lossNumber, spinNumber
+User login system
+Payment methods
+Turning effect to the wheels
