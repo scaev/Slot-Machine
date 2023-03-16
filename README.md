@@ -1,3 +1,4 @@
+<div id="description" align="center"> 
 # Slot-Machine
 
 Slot Machine
@@ -11,12 +12,20 @@ You can also customize your experience by adjusting the bet amount.
 
 Good luck and have fun!
 
-https://scaev.github.io/Slot-Machine/
+### Check this app via [link 👈](https://scaev.github.io/Slot-Machine/)
 
-Technologies used: JavaScript, HTML, CSS, jQuery
+<div id="header" align="center">
+  <img src="https://i.imgur.com/ZI9Nov1.png" width="400" height="400">
+  <img src="https://i.imgur.com/WdLNFlk.png" width="400" height="400">
+</div>
 
-![Slot MAchines](https://i.imgur.com/ZI9Nov1.png)
-![My Project](https://i.imgur.com/WdLNFlk.png)
+## :computer: Technologies Used
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
+![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
+![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
+![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
+
 
 Some useful links:
 
