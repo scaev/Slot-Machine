@@ -1,5 +1,9 @@
-<div id="description" align="center"> 
+<div align="center"> 
 ### Slot-Machine
+</div>
+
+<div id="description" align="center"> 
+
 
 Welcome to the Slot Machine!
 
@@ -26,12 +30,12 @@ Good luck and have fun!
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 
 
-Some useful links:
+## Some useful links:
 
 [HTML Textbox](https://blog.hubspot.com/website/html-text-box)
 [Input value as a number](https://blog.hubspot.com/website/html-text-box)
 
-Next Steps:
+## Next Steps:
 
 winRatio, winNumber, lossNumber, spinNumber
 User login system
